@@ -5,8 +5,8 @@ summary: Libraries for WPE WebKit based browser appliances.
 description: |
   Contains compatible versions of libwpe, wpebackend-fdo and wpe-webkit together with all build and runtime dependencies. Intended as a stage-snap for other snaps that want to integrate WPE WebKit; see wpe-webkit-mir-kiosk for reference.
 
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+grade: stable
+confinement: strict
 
 parts:
   libwpe:
@@ -15,6 +15,7 @@ parts:
     source: https://wpewebkit.org/releases/libwpe-1.2.0.tar.xz
     configflags:
       - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX:PATH=/usr
       - -GNinja
     build-packages:
       - build-essential
@@ -30,6 +31,7 @@ parts:
     plugin: cmake
     configflags:
       - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX:PATH=/usr
       - -GNinja
     # latest stable release
     source: https://wpewebkit.org/releases/wpebackend-fdo-1.2.0.tar.xz
@@ -54,7 +56,7 @@ parts:
     configflags:
       - -DPORT=WPE
       - -DCMAKE_BUILD_TYPE=Release
-      # - -DCMAKE_INSTALL_PREFIX:PATH=/usr
+      - -DCMAKE_INSTALL_PREFIX:PATH=/usr
       - -GNinja
     build-packages:
       - build-essential
