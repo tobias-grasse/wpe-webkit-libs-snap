@@ -85,6 +85,7 @@ parts:
       - weston
       - zlib1g-dev
     stage-packages:
+      - libgpm2
       - libwayland-client0
       - libwayland-server0
       - libcairo2
