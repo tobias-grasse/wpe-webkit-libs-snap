@@ -12,7 +12,7 @@ parts:
   libwpe:
     plugin: cmake
     # latest stable release
-    source: https://wpewebkit.org/releases/libwpe-1.2.0.tar.xz
+    source: https://wpewebkit.org/releases/libwpe-1.2.1.tar.xz
     configflags:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX:PATH=/usr
@@ -34,7 +34,7 @@ parts:
       - -DCMAKE_INSTALL_PREFIX:PATH=/usr
       - -GNinja
     # latest stable release
-    source: https://wpewebkit.org/releases/wpebackend-fdo-1.2.0.tar.xz
+    source: https://wpewebkit.org/releases/wpebackend-fdo-1.2.2.tar.xz
     build-packages:
       - build-essential
       - libegl1
@@ -51,7 +51,7 @@ parts:
   wpe-webkit:
     after: [wpebackend-fdo]
     # latest stable release
-    source: https://wpewebkit.org/releases/wpewebkit-2.24.2.tar.xz
+    source: https://wpewebkit.org/releases/wpewebkit-2.24.3.tar.xz
     plugin: cmake
     configflags:
       - -DPORT=WPE
