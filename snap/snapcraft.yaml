@@ -133,12 +133,12 @@ parts:
     # export CC=/usr/bin/clang
     # export CXX=/usr/bin/clang++
     # snapcraftctl build
-    override-build: |  
+    override-build: |
       WPE_VERSION=$(ruby "$SNAPCRAFT_PROJECT_DIR/src/getWPEversion.rb" "$SNAPCRAFT_PART_SRC/Source/cmake/OptionsWPE.cmake" full)
       snapcraftctl set-version "$WPE_VERSION"
-      
+
       # Even minor versions indicate stable releases. See https://wpewebkit.org/release/schedule/
-    
+
       WPE_MINOR_VERSION=$(ruby "$SNAPCRAFT_PROJECT_DIR/src/getWPEversion.rb" "$SNAPCRAFT_PART_SRC/Source/cmake/OptionsWPE.cmake" minor)
 
       echo $WPE_MINOR_VERSION
