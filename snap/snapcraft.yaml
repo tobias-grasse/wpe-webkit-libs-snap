@@ -57,6 +57,7 @@ parts:
       - -DPORT=WPE
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX:PATH=/usr
+      - -DENABLE_BUBBLEWRAP_SANDBOX=OFF
       - -GNinja
     build-packages:
       - build-essential
