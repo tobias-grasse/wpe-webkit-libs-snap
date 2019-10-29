@@ -84,7 +84,11 @@ parts:
       # TODO: Are these still required without the minibrowser?
       - weston
       - zlib1g-dev
+      - libatk1.0-0
+      - libatk-bridge2.0-0
     stage-packages:
+      - libatk1.0-0 # TODO: Required at runtime?
+      - libatk-bridge2.0-0 # TODO: Required at runtime?
       - libgpm2
       - libwayland-client0
       - libwayland-server0
