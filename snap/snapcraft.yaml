@@ -84,8 +84,8 @@ parts:
       # TODO: Are these still required without the minibrowser?
       - weston
       - zlib1g-dev
-      - libatk1.0-0
-      - libatk-bridge2.0-0
+      - libatk1.0-dev
+      - libatk-bridge2.0-dev
     stage-packages:
       - libatk1.0-0 # TODO: Required at runtime?
       - libatk-bridge2.0-0 # TODO: Required at runtime?
