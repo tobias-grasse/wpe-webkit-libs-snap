@@ -146,8 +146,6 @@ parts:
 
       WPE_MINOR_VERSION=$(ruby "$SNAPCRAFT_PROJECT_DIR/src/getWPEversion.rb" "$SNAPCRAFT_PART_SRC/Source/cmake/OptionsWPE.cmake" minor)
 
-      echo $WPE_MINOR_VERSION
-
       if [ $(( $WPE_MINOR_VERSION % 2)) -eq 0 ]; then
         snapcraftctl set-grade stable
       else
