@@ -34,7 +34,7 @@ parts:
       - -DCMAKE_INSTALL_PREFIX:PATH=/usr
       - -GNinja
     # latest stable release
-    source: https://wpewebkit.org/releases/wpebackend-fdo-1.4.0.tar.xz
+    source: https://wpewebkit.org/releases/wpebackend-fdo-1.4.2.tar.xz
     build-packages:
       - build-essential
       - libegl1
@@ -51,7 +51,7 @@ parts:
   wpe-webkit:
     after: [wpebackend-fdo]
     # latest stable release
-    source: https://wpewebkit.org/releases/wpewebkit-2.26.2.tar.xz
+    source: https://wpewebkit.org/releases/wpewebkit-2.26.4.tar.xz
     plugin: cmake
     configflags:
       - -DPORT=WPE
