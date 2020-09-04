@@ -1,5 +1,5 @@
 name: wpe-webkit-libs
-base: core18
+base: core20
 adopt-info: wpe-webkit
 summary: Libraries for WPE WebKit based browser appliances.
 description: |
