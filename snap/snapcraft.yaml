@@ -87,38 +87,49 @@ parts:
       - zlib1g-dev
       - libatk1.0-dev
       - libatk-bridge2.0-dev
-    stage-packages:
       - libatk1.0-0 # TODO: Required at runtime?
       - libatk-bridge2.0-0 # TODO: Required at runtime?
       - libgpm2
       - libwayland-client0
       - libwayland-server0
+    stage-packages: # See https://packages.debian.org/sid/libwpewebkit-1.0-3
+      - bubblewrap
+      - libatk-bridge2.0-0
+      - libatk1.0-0
+      - libatomic1
+      - libc6
       - libcairo2
       - libepoxy0
-      - libgbm1
-      - libgl1
-      - libglx0
+      - libfontconfig1
+      - libfreetype6
+      - libgcc-s1
       - libgcrypt20
+      - libglib2.0-0
       - libgstreamer-gl1.0-0
       - libgstreamer-plugins-base1.0-0
+      - libgstreamer1.0-0
       - libharfbuzz-icu0
-      - libicu60
-      - libjpeg8
+      - libharfbuzz0b
+      - libicu66 # focal LTS does not have 67 ...
+      - libjpeg-turbo8 # Ubuntu renames libjpeg62-turbo
       - libopenjp2-7
-      - liborc-0.4-0
+      - libpng16-16
+      - libseccomp2
       - libsoup2.4-1
       - libsqlite3-0
+      - libstdc++6
+      - libsystemd0
       - libtasn1-6
       - libwebp6
       - libwebpdemux2
       - libwoff1
+      # libwpe-1.0-1 is built from source in this snap
       - libxml2
-      - libxml2-utils
       - libxslt1.1
-      - python
-      - ruby
+      - xdg-dbus-proxy
       - zlib1g
-      # from https://github.com/Igalia/meta-webkit/blob/e0d5fb3c66b910984464f1f22567a0cd618331ae/recipes-browser/wpewebkit/wpewebkit.inc#L87
+
+      # FIXME: Really required? from https://github.com/Igalia/meta-webkit/blob/e0d5fb3c66b910984464f1f22567a0cd618331ae/recipes-browser/wpewebkit/wpewebkit.inc#L87
       - gstreamer1.0-gl
       - gstreamer1.0-libav
       - gstreamer1.0-plugins-base
