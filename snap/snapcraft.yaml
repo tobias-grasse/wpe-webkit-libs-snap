@@ -4,8 +4,6 @@ adopt-info: wpe-webkit
 summary: Libraries for WPE WebKit based browser appliances.
 description: |
   Contains compatible versions of libwpe, wpebackend-fdo and wpe-webkit together with all build and runtime dependencies. Intended as a stage-snap for other snaps that want to integrate WPE WebKit; see wpe-webkit-mir-kiosk for reference.
-
-grade: stable
 confinement: strict
 
 parts:
